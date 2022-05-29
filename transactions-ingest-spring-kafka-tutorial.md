@@ -34,6 +34,18 @@ Below is _**out of scope**_ but can be a series of sessions with the customer's 
 ##### Code Repository Structure
 ![alt_text](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/assets/screenshots/source-code-structure.png?raw=true)
 
+#### Code Structure Pattern
+Entry Point Package - _org.aiven.entry_
+
+Repository Pattern Package - _io_
+
+Utility Package - _utils_
+
+Reader Package - _reader_
+
+Resources
+1. client side certificates - ca.pem, client.truststore.jks
+2. data resource - transactions.csv
 
 ##### Debug Execution Output
 ```aidl
