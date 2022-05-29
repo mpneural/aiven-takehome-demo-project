@@ -28,3 +28,6 @@ Below is _**out of scope**_ but can be a series of sessions with the customer's 
 3. How to deploy Kafka Client applications on the customer's Kubernetes Environment
 4. Client's Real-time Data Platform and Event-Driven Architecture journey and design
 
+## **Observability**
+
+![alt text](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/assets/screenshots/kafka-cluster-internal-metrics-1.png?raw=true)
