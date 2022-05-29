@@ -36,7 +36,7 @@ Since springboot framework allows us to manage our codebase much more efficientl
 The scope of this documentation is to not articulate why, what and how to use annotation but that can be discussed as part of another Springboot 1-o-1 sessions.
 
 Below sections will highlight some important aspects into the code base and also a little bit of details.
-#### ProducerFactory Bean
+#### ProducerFactory Bean and Kafka Cluster Connection
 Some important points to note here:
 1. Use of Kafka, Configuration and Component Scanning annotation
 2. Choice of some configurations such as 
@@ -127,6 +127,40 @@ public void readAndCallbackFinTxn(String filename, Consumer<FinancialTransaction
             closeReader(beanReader);
         }
     }
+```
+#### Producer Class
+LineProducer class is the code kafka producer class that instantiates KafkaTemplate and ObjectMapper from the ProducerConfiguration factory
+
+The entry point of the application calls _sendFinTxnMessage_ function that processes the line from CSV, maps the read data points, maps it to the FinancialTransactionMessage object and then publishes on the topic financial_transaction topic.
+
+**NOTE :** Here the assumption is that in Aiven Kafka Cluster the topic named financial_transaction exists, else it will attempt to create a topic in the process. It is a Kafka Server Side best practice to not let client application create the topics via application code, rather during the CD process align the topic creation/validation process as a deployment step first
+
+```aidl
+@Component
+@ComponentScan("io")
+@ConfigurationPropertiesScan("utils.ProducerConfiguration")
+public class LineProducer {
+    private final KafkaTemplate<String, String> kafkaTemplate;
+    private final ObjectMapper objectMapper;
+
+    private Logger logger = LoggerFactory.getLogger(LineProducer.class);
+
+
+    public LineProducer(KafkaTemplate<String, String> kafkaTemplate, ObjectMapper objectMapper) {
+        this.kafkaTemplate = new ProducerConfiguration().kafkaTemplate();
+        this.objectMapper = new ProducerConfiguration().objectMapper();
+
+    }
+
+    public void sendFinTxnMessage(FinancialTransactionsMessage lineMessage) {
+        try {
+            kafkaTemplate.send("financial_transaction", String.valueOf(UUID.randomUUID()), objectMapper.writeValueAsString(lineMessage));
+            logger.info("Line with id: {} sent", lineMessage.getTransaction_id());
+        } catch (JsonProcessingException e) {
+            logger.error("Error while serializing " + lineMessage.toString(), e);
+        }
+    }
+}
 ```
 
 ##### Code Repository Structure
