@@ -36,6 +36,34 @@ Since springboot framework allows us to manage our codebase much more efficientl
 The scope of this documentation is to not articulate why, what and how to use annotation but that can be discussed as part of another Springboot 1-o-1 sessions.
 
 Below sections will highlight some important aspects into the code base and also a little bit of details.
+#### Boot Application Entrypoint Class
+Any Java based Springboot application is instantiated with main method as you can see in the below code.
+
+Once the application is run then, next in the step for this application is a commandline executor which reads the CSV file and asks to process and send the transaction json message line by line. 
+
+Once all of the CSV lines are processed, the application goes in to stand by mode for any further inputs
+
+```aidl
+@SpringBootApplication
+@ComponentScan("org.aiven")
+@ComponentScan("reader")
+public class CSVProducerApp {
+
+    public static void main(String[] args)
+    {
+        SpringApplication.run(CSVProducerApp.class,args);
+    }
+
+    @Bean
+    public CommandLineRunner sendFile(LineProducer lineProducer, CsvReader csvReader)
+    {
+        return args -> {
+            csvReader.readAndCallbackFinTxn("classpath:transactions.csv", lineProducer::sendFinTxnMessage);
+        };
+    }
+}
+```
+
 #### ProducerFactory Bean and Kafka Cluster Connection
 Some important points to note here:
 1. Use of Kafka, Configuration and Component Scanning annotation
