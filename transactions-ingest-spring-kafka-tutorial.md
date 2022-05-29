@@ -29,6 +29,17 @@ Below is _**out of scope**_ but can be a series of sessions with the customer's 
 3. How to deploy Kafka Client applications on the customer's Kubernetes Environment
 4. Client's Real-time Data Platform and Event-Driven Architecture journey and design
 
+## **Spring Kafka CSV Ingest Project**
+
+##### Code Repository Structure
+![alt_text](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/assets/screenshots/source-code-structure.png?raw=true)
+
+
+##### Debug Execution Output
+```aidl
+
+```
+
 ## **Observability**
 
 ### **Aiven Grafana Service Login**
