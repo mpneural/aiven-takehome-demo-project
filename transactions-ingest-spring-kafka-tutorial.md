@@ -2,7 +2,7 @@
 
 ## Context
 
-Aiven is working with a travel industry grwoth stage customer towards an initial adoption of turning their Internal BI systems to adopt real-time Analytics support using Kafka as their nervous system. 
+Aiven is working with a travel industry grwoth stage customer towards an initial adoption of Kafka turning their Internal BI systems to unlock real-time Analytics capabilities. 
 
 Within customer's eco-system there are 3 groups that are bootstrapping their journey on Aiven Kafka. The groups are relatively new to Kafka eco-system though the Chief Architect comes from years of Event Driven Data Systems using Kafka from the past. 
 
