@@ -22,6 +22,7 @@ The scope of this tutorial material is to help guide the
 2. Data Operations team about how Kafka cluster is integrated with InfluxDB and Grafana services offered by Aiven and understand out of box Kafka cluster metrics available in Grafana Dashboard
 
 Below is _**out of scope**_ but can be a series of sessions with the customer's teams
+
 0. Kafka and eco-system basics for up-rising Kafka Developer and Operator Adoption
 1. How to set up Kafka Cluster and Security via automation, Infrastructure and Automation
 2. How to on-board any existing Kafka client applications (such as Kafka Connectors, Plain Producer/Consumers, Kafka Streams/KSQL, etc)
