@@ -35,7 +35,7 @@ This is 4 part series of material that encompasses below
 2. Details in regards to code
 3. Aiven Kafka service observability how to set up guide
 
-### Part-1 **Spring Kafka CSV Ingest Project**
+### [Part-1 Setup, Execute Integrated Aiven Kafka Service with Spring Kafka CSV Ingest]()
 
 ### [Part-2 Important Code Snippets](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/transactions-ingest-spring-kafka-tutorial.md)
 
