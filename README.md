@@ -37,7 +37,7 @@ This is 4 part series of material that encompasses below
 
 ### Part-1 **Spring Kafka CSV Ingest Project**
 
-### Part-2 Important Code Snippets
+### ![alt_text] (https://github.com/mpneural/aiven-takehome-demo-project/blob/master/transactions-ingest-spring-kafka-tutorial.md?raw=true) Part-2 Important Code Snippets
 
 ### Part-3 Aiven Kafka Service observability Metrics Dashboard Guide
 In-depth information is at below markdown location : 
