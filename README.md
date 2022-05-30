@@ -39,6 +39,4 @@ This is 4 part series of material that encompasses below
 
 ### [Part-2 Important Code Snippets](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/transactions-ingest-spring-kafka-tutorial.md)
 
-### Part-3 Aiven Kafka Service observability Metrics Dashboard Guide
-In-depth information is at below markdown location : 
-https://github.com/mpneural/aiven-takehome-demo-project/blob/master/transactions-ingest-spring-kafka-tutorial.md
+### [Part-3 Aiven Kafka Service observability Metrics Dashboard Guide](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/aiven-kafka-observability-setup-guide.md)
