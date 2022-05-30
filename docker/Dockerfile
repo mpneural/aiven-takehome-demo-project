@@ -13,4 +13,4 @@ WORKDIR /app
 # copy jar into image
 COPY build/libs/csv-kafka-*.jar /app/app.jar
 
-ENTRYPOINT java -Xmx128m -Xmx128m -jar app.jar
+ENTRYPOINT java -Xmx256m -Xmx256m -jar app.jar
