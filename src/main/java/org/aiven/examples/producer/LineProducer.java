@@ -31,7 +31,6 @@ public class LineProducer {
 
     public void sendFinTxnMessage(FinancialTransactionsMessage lineMessage) {
         try {
-            // kafkaTemplate.send("a_htl_bookings", lineMessage.getId(),objectMapper.writeValueAsString(lineMessage));
             kafkaTemplate.send("financial_transaction", String.valueOf(UUID.randomUUID()), objectMapper.writeValueAsString(lineMessage));
             logger.info("Line with id: {} sent", lineMessage.getTransaction_id());
         } catch (JsonProcessingException e) {
