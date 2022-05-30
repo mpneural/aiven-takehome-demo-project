@@ -57,7 +57,7 @@
 
 5. Update Aiven Kafka connection properties in the project ProducerFactory class
     
-    5.1 Go to src > main > java > utils > ProducerConfiguration and replace the values of below key proerpties
+    5.1 In the prject code base go to src > main > java > utils > ProducerConfiguration and replace the values of below key proerpties
    
         configProps.put(
                 ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,
@@ -68,3 +68,7 @@
         configProps.put("ssl.truststore.password","truststore-password"); // password configured for truststore jks file
         
         configProps.put("sasl.jaas.config","org.apache.kafka.common.security.plain.PlainLoginModule required username='aiven-sasl-username' password='aiven-sasl-password';"); // SASL Plain Authentication credentials
+
+6. Please ensure that transactions.csv file is bundled within the resources
+    
+    6.1 In the project code base go to : src > main > resources and find transactions.csv file
