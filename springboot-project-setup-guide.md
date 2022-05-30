@@ -73,16 +73,17 @@
     
     6.1 In the project code base go to : _src > main > resources_ and find transactions.csv file
    
-7. Perform below commands
-   
-         gradle clean
-         gradle build
 
-8. We can manually go to the main method of the Springboot Entrypoint class and either execute the application in debug or run mode from IntelliJ
+7. We can manually go to the main method of the Springboot Entrypoint class and either execute the application in debug or run mode from IntelliJ
 
-   8.1 In the project code base go to : _src > main > java > or.avien > entry > CSVProducerApp.java_
+   7.1 In the project code base go to : _src > main > java > or.avien > entry > CSVProducerApp.java_
    
-   8.2 Choose either Debug or Run options from the below
+   7.2 Choose either Debug or Run options from the below
 
    ![alt_text](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/assets/screenshots/springboot-java-main-execution-options.png?raw=true) 
    
+
+9. Perform below commands 
+   
+         gradle clean
+         gradle build
