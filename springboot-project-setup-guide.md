@@ -96,8 +96,11 @@
    
    9.2 We should see messages similar to below 
    
-9. Once we are happy with the aboce drive run we can do application packaging with below commands 
+10. Once we are happy with the aboce drive run we can do application packaging with below commands 
    
          gradle clean
          gradle build
          gradle bootBuildImage
+
+11. Please feel free to generate docker image for kubernetes deployment as desired. The project also has docker build script under directory as : _project_home > docker > Dockerfile_
+   
