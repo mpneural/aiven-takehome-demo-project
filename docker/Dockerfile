@@ -11,11 +11,6 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # copy jar into image
-COPY *.jar /app/
+COPY build/libs/csv-kafka-*.jar /app/app.jar
 
-# create a symlink because we have to have a single file to pass to "java -jar some.jar
-RUN ln -s $(ls -1 *.jar) app.jar
-
-COPY entrypoint.sh /
-RUN chmod +x /entrypoint.sh
-CMD /entrypoint.sh
+ENTRYPOINT java -Xmx128m -Xmx128m -jar app.jar
