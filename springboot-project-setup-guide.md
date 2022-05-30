@@ -72,3 +72,14 @@
 6. Please ensure that transactions.csv file is bundled within the resources
     
     6.1 In the project code base go to : _src > main > resources_ and find transactions.csv file
+   
+7. Perform below commands
+   
+         gradle clean
+         gradle build
+
+8. We can manually go to the main method of the Springboot Entrypoint class and either execute the application in debug or run mode from IntelliJ
+
+   8.1 In the project code base go to : _src > main > java > or.avien > entry > CSVProducerApp.java_
+   
+   
