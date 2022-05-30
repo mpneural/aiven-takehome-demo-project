@@ -1,4 +1,4 @@
-# aiven-takehome-demo-project
+# aiven-demo-project
 A demo project about how to use Aiven services
 
 ## Context
