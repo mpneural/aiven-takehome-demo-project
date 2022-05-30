@@ -57,7 +57,7 @@
 
 5. Update Aiven Kafka connection properties in the project ProducerFactory class
     
-    5.1 In the prject code base go to src > main > java > utils > ProducerConfiguration and replace the values of below key proerpties
+    5.1 In the prject code base go to _src > main > java > utils > ProducerConfiguration.java_ and replace the values of below key proerpties
    
         configProps.put(
                 ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,
@@ -71,4 +71,4 @@
 
 6. Please ensure that transactions.csv file is bundled within the resources
     
-    6.1 In the project code base go to : src > main > resources and find transactions.csv file
+    6.1 In the project code base go to : _src > main > resources_ and find transactions.csv file
