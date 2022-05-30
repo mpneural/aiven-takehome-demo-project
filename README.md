@@ -30,7 +30,7 @@ Below is _**out of scope**_ but can be a series of sessions with the customer's 
 3. How to deploy Kafka Client applications on the customer's Kubernetes Environment
 4. Client's Real-time Data Platform and Event-Driven Architecture journey and design
 
-This is 4 part series of material that encompasses below
+This is 3 part series of material that encompasses below
 1. How to setup and execute the project
 2. Details in regards to code
 3. Aiven Kafka service observability how to set up guide
