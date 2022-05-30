@@ -34,6 +34,7 @@ They provide insight about health of each Kafka broker node. Important metrics t
 6. Network iops
 7. Actual Disc usage by Kafka Topics
 
+![alt_text](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/assets/screenshots/cluster-general-metrics.png?raw=true)
 ### **Kafka Metrics**
 These metrics provide insight about how Kafka cluster and internals are behaving. Characteristics to watch out for:
 1. How many incoming messages
