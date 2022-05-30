@@ -82,8 +82,22 @@
 
    ![alt_text](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/assets/screenshots/springboot-java-main-execution-options.png?raw=true) 
    
+8. Depending upon your execution mode i.e. run or debug you will see output accordingly
+   
+   8.1 Common issues that one may come across could be :
+         
+         8.1.1 SSL Handshake Exception in case the truststore file is not accessible or corrupted or the password didn't match
+         8.1.2 SASL authentication issue with Kafka Brokers
+         8.1.3 Supplied topic via producer didn't exist and Metadata API not able to reach the topic
 
-9. Perform below commands 
+9. If the execution was successful one can see the produced messages output on Aiven Kafka Topic page.
+   
+   9.1 We would go to Messages tab > select offset 0 > message format json > select decode before output option
+   
+   9.2 We should see messages similar to below 
+   
+9. Once we are happy with the aboce drive run we can do application packaging with below commands 
    
          gradle clean
          gradle build
+         gradle bootBuildImage
