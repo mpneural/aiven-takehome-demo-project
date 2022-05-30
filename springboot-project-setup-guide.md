@@ -82,4 +82,7 @@
 
    8.1 In the project code base go to : _src > main > java > or.avien > entry > CSVProducerApp.java_
    
+   8.2 Choose either Debug or Run options from the below
+
+   ![alt_text](https://github.com/mpneural/aiven-takehome-demo-project/blob/master/assets/screenshots/springboot-java-main-execution-options.png?raw=true) 
    
